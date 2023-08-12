@@ -18,7 +18,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 2rem;
+      font-size: clamp(1rem, 4vw, 3rem);
       overflow: hidden;
     }
 
@@ -39,7 +39,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 100dvh;
     }
 
     .page-bg {
@@ -47,6 +47,25 @@
   background-size: cover; */
       background: linear-gradient(#101925, #1f3949);
       z-index: -1;
+    }
+    
+    .page-wrapper {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.3);
+      z-index: 2;
+    }
+
+    .page-wrapper h1 {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .page-wrapper p {
+      color: rgba(255, 255, 255, 0.4);
+      font-style: italic;
+    }
+
+    .page-wrapper p span {
+      font-weight: bold;
     }
 
     .particle,
@@ -135,12 +154,6 @@
         transform: translateY(-2560px);
       }
     }
-
-    .page-wrapper {
-      text-align: center;
-      color: rgba(255, 255, 255, 0.1);
-      z-index: 2;
-    }
   </style>
 </head>
 
@@ -157,7 +170,7 @@
 
   <div class="page-wrapper">
     <h1>D7460N.io</h1>
-    <p>Let the CSS renaissance begin</p>
+    <p>Let the <span>CSS</span> renaissance begin</p>
     <small><small>Coming soon to a browser near you</small></small>
   </div>
 </body>
